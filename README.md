@@ -16,12 +16,12 @@
 copy and paste the following into a proxmox terminal and run it:
 
 ```bash
-URL="https://channels.nixos.org/nixos-23.11/latest-nixos-minimal-x86_64-linux.iso"
+URL="https://channels.nixos.org/nixos-24.05/latest-nixos-minimal-x86_64-linux.iso"
 FILENAME="${URL##*/}"
 LOCAL_IMAGE=/var/lib/vz/template/iso/$FILENAME
 if [[ ! -f $LOCAL_IMAGE ]]; then 
    echo "downloading nixos iso..."
-   curl -s $URL > $LOCAL_IMAGE
+   curl -L -s $URL > $LOCAL_IMAGE
 fi
 
 if [[ $(qm list | grep -v grep | grep -ci ${VM_ID:-8000}) > 0 ]]; then
