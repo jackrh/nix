@@ -81,7 +81,7 @@ nixos-install
 # Check if the directory exists
 if [ -d "/mnt/home/jack" ]; then
     touch /mnt/home/jack/.zshrc
-    chown 1000:100 /mnt/home/anvil/.zshrc
+    chown 1000:100 /mnt/home/jack/.zshrc
 fi
 
 while true; do
