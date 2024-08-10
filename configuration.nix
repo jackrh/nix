@@ -11,11 +11,11 @@
   system.autoUpgrade.enable = true;
 
   # Set your time zone.
-  time.timeZone = "America/New_York";
-  #time.timeZone = "America/Los_Angeles";
+  #time.timeZone = "America/New_York";
+  time.timeZone = "America/Los_Angeles";
 
   # Define a user account.
-  users.users.anvil = {
+  users.users.jack = {
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "systemd-journal" ];
     shell = pkgs.zsh;
@@ -57,9 +57,9 @@
     cloud-init
     coreutils
     curl
-    docker
-    docker-buildx
-    docker-compose
+    #docker
+    #docker-buildx
+    #docker-compose
     eza
     findutils
     fzf
@@ -77,6 +77,7 @@
     netcat
     nettools
     nmap
+    neovim
     openssl
     python3
     python3Packages.pip
@@ -100,7 +101,7 @@
   #services.cloud-init.enable = true;
   services.openssh.enable = true;
   services.qemuGuest.enable = true;
-  virtualisation.docker.enable = true;
+  #virtualisation.docker.enable = true;
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 }
